@@ -6,9 +6,9 @@ LANGS = en zh_CN
 all: html
 
 define makeall
-PS1='> '; \
-source $(SPHINX_MARKDOWN)/bin/activate; \
-$(foreach lang,$(LANGS),make -C $(lang) $@;)
+PS1='> ' \
+  && . $(SPHINX_MARKDOWN)/bin/activate \
+  $(foreach lang,$(LANGS),&& make -C $(lang) $@)
 endef
 
 html:

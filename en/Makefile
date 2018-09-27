@@ -25,7 +25,7 @@ html latex: Makefile mdpp
 mdpp: $(MDPP_TARGET)
 
 %.md: %.mdpp FORCE_MAKE
-	@$(MDPP) $< -o $@
+	@$(MDPP) -e latexrender $< -o $@
 
 pdf: latex
 	rm -f "$(BUILDDIR)"/latex/*.pdf
