@@ -57,7 +57,7 @@ wget -c http://cdimage.ubuntu.com/ubuntu-base/releases/16.04.1/release/ubuntu-ba
 
 ``` shell
 fallocate -l 1000M rootfs.img
-sudo mkfs.ext4 -F ROOTFS rootfs.img
+sudo mkfs.ext4 -F -L ROOTFS rootfs.img
 mkdir mnt
 sudo mount rootfs.img mnt
 sudo tar -xzvf ubuntu-base-16.04.1-base-arm64.tar.gz -C mnt/
