@@ -32,9 +32,9 @@ Download the Linux SDK:
 
 ``` shell
 # U-Boot
-git clone -b release https://github.com/FireflyTeam/u-boot
+git clone -b roc-rk3328-cc https://github.com/FireflyTeam/u-boot
 # Kernel
-git clone -b release-4.4 https://github.com/FireflyTeam/kernel --depth=1
+git clone -b roc-rk3328-cc https://github.com/FireflyTeam/kernel --depth=1
 # Build
 git clone -b debian https://github.com/FireflyTeam/build
 # Rkbin
