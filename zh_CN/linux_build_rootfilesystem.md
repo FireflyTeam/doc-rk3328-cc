@@ -81,7 +81,7 @@ passwd $USER
 # 输入密码
 
 # 设置主机名和以太网
-echo $HOST /etc/hostname
+echo $HOST > /etc/hostname
 echo "127.0.0.1    localhost.localdomain localhost" > /etc/hosts
 echo "127.0.0.1    $HOST" >> /etc/hosts
 echo "auto eth0" > /etc/network/interfaces.d/eth0
