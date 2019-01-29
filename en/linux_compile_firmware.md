@@ -6,7 +6,7 @@ In this chapter, we'll walk through the steps of compiling Linux firmware for [R
 
 The Linux firmware is built under the following environment:
 
-- Ubuntu 16.04 amd64
+- Debian 9 amd64
 
 Install following packages:
 
@@ -14,9 +14,12 @@ Install following packages:
 sudo apt-get install bc bison build-essential curl \
      device-tree-compiler dosfstools flex gcc-aarch64-linux-gnu \
      gcc-arm-linux-gnueabihf gdisk git gnupg gperf libc6-dev \
-     libncurses5-dev libpython-dev libssl-dev libssl1.0.0 \
-     lzop mtools parted repo swig tar zip
+     libncurses5-dev libpython-dev libssl-dev libssl1.0.2 \
+     lzop mtools parted swig tar zip python-kerberos
 ```
+Install repo manually
+wget http://ftp.us.debian.org/debian/pool/contrib/r/repo/repo_1.12.37-3_all.deb
+sudo dpkg -i repo_1.12.37-3_all.deb
 
 ## Download the Linux SDK
 
@@ -24,7 +27,7 @@ Create the project directory:
 
 ``` shell
 # create project dir
-mkdir ~/proj/roc-rk3328-cc
+mkdir -p ~/proj/roc-rk3328-cc
 cd ~/proj/roc-rk3328-cc
 ```
 
